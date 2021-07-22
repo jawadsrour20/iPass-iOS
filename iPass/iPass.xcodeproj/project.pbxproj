@@ -17,6 +17,11 @@
 		183D7E4A26A4DBBD00858D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183D7E4926A4DBBD00858D9B /* Assets.xcassets */; };
 		183D7E4D26A4DBBD00858D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183D7E4B26A4DBBD00858D9B /* LaunchScreen.storyboard */; };
 		183D7E5626A4E28500858D9B /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D7E5526A4E28500858D9B /* MyCustomView.swift */; };
+		183DB41626A9FE5F004AEDCF /* MyPasswordsPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183DB41526A9FE5F004AEDCF /* MyPasswordsPageTableViewController.swift */; };
+		183DB41926AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183DB41826AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift */; };
+		183DB41C26AA0AF8004AEDCF /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183DB41B26AA0AF8004AEDCF /* ItemCell.swift */; };
+		183DB41F26AA2651004AEDCF /* MyFavoritePasswordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183DB41E26AA2651004AEDCF /* MyFavoritePasswordsTableViewController.swift */; };
+		183DB42226AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183DB42126AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift */; };
 		184A3DEB26A767E900ED2FE8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A3DEA26A767E900ED2FE8 /* SettingsViewController.swift */; };
 		184A3DF226A77E9200ED2FE8 /* AddNewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A3DF126A77E9200ED2FE8 /* AddNewPasswordViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +39,11 @@
 		183D7E4C26A4DBBD00858D9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		183D7E4E26A4DBBD00858D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183D7E5526A4E28500858D9B /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
+		183DB41526A9FE5F004AEDCF /* MyPasswordsPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPasswordsPageTableViewController.swift; sourceTree = "<group>"; };
+		183DB41826AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPasswordsTableViewCell.swift; sourceTree = "<group>"; };
+		183DB41B26AA0AF8004AEDCF /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		183DB41E26AA2651004AEDCF /* MyFavoritePasswordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritePasswordsTableViewController.swift; sourceTree = "<group>"; };
+		183DB42126AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritePasswordsTableViewCell.swift; sourceTree = "<group>"; };
 		184A3DEA26A767E900ED2FE8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		184A3DF126A77E9200ED2FE8 /* AddNewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +91,11 @@
 				18394A2C26A742A300E85298 /* MyCustomTextField.swift */,
 				184A3DEA26A767E900ED2FE8 /* SettingsViewController.swift */,
 				184A3DF126A77E9200ED2FE8 /* AddNewPasswordViewController.swift */,
+				183DB41B26AA0AF8004AEDCF /* ItemCell.swift */,
+				183DB41526A9FE5F004AEDCF /* MyPasswordsPageTableViewController.swift */,
+				183DB41E26AA2651004AEDCF /* MyFavoritePasswordsTableViewController.swift */,
+				183DB41826AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift */,
+				183DB42126AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift */,
 			);
 			path = iPass;
 			sourceTree = "<group>";
@@ -157,10 +172,15 @@
 			files = (
 				184A3DF226A77E9200ED2FE8 /* AddNewPasswordViewController.swift in Sources */,
 				183B3DB626A6DA81007D8A31 /* CreateAccountViewController.swift in Sources */,
+				183DB41926AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift in Sources */,
 				183B3DAF26A6BC50007D8A31 /* MyCustomButton.swift in Sources */,
+				183DB41626A9FE5F004AEDCF /* MyPasswordsPageTableViewController.swift in Sources */,
 				183D7E4526A4DBBB00858D9B /* ViewController.swift in Sources */,
+				183DB42226AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift in Sources */,
+				183DB41F26AA2651004AEDCF /* MyFavoritePasswordsTableViewController.swift in Sources */,
 				18394A2D26A742A300E85298 /* MyCustomTextField.swift in Sources */,
 				183D7E5626A4E28500858D9B /* MyCustomView.swift in Sources */,
+				183DB41C26AA0AF8004AEDCF /* ItemCell.swift in Sources */,
 				183D7E4126A4DBBB00858D9B /* AppDelegate.swift in Sources */,
 				183D7E4326A4DBBB00858D9B /* SceneDelegate.swift in Sources */,
 				184A3DEB26A767E900ED2FE8 /* SettingsViewController.swift in Sources */,

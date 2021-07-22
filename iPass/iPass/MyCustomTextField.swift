@@ -62,6 +62,9 @@ import UIKit
 
         self.rightView = outerView
         self.rightViewMode = .always
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        self.rightView?.isUserInteractionEnabled = true
+        self.rightView?.addGestureRecognizer(tapGestureRecognizer)
       }
     
     /*
