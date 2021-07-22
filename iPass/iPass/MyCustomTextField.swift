@@ -24,25 +24,47 @@ import UIKit
         }
     
     
-    @IBInspectable var MyImage: UIImage? = nil {
+    @IBInspectable var RightIcon: UIImage? = nil {
         didSet{
-            addRightImg(field: self, img: MyImage!)
+            setRightIcon(img: RightIcon!)
         }
     }
     
-    @IBInspectable var MyLeftImage: UIImage? = nil {
+    @IBInspectable var LeftIcon: UIImage? = nil {
         didSet{
-            addLeftImg(field: self, img: MyLeftImage!)
+            setLeftIcon(img: LeftIcon!)
         }
     }
     
-    func addLeftImg(field: UITextField, img: UIImage){
-        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height))
-        leftImageView.image = img
-        field.leftView = leftImageView
-        field.leftViewMode = .always
-    }
+    func setLeftIcon(img: UIImage) {
+
+        let padding = 10
+        let size = 20
+
+        let outerView = UIView(frame: CGRect(x: 0, y: 0, width: img.size.width+CGFloat(padding), height: img.size.height) )
+        let iconView  = UIImageView(frame: CGRect(x: padding, y: 0, width: size, height: size))
+        iconView.image = img
+        outerView.addSubview(iconView)
+
+        self.leftView = outerView
+        self.leftViewMode = .always
+      }
     
+    func setRightIcon(img: UIImage) {
+
+        let padding = 10
+        let size = 20
+
+        let outerView = UIView(frame: CGRect(x: 0, y: 0, width: img.size.width+CGFloat(padding), height: img.size.height) )
+        let iconView  = UIImageView(frame: CGRect(x: padding, y: 0, width: size, height: size))
+        iconView.image = img
+        outerView.addSubview(iconView)
+
+        self.rightView = outerView
+        self.rightViewMode = .always
+      }
+    
+    /*
     func addRightImg(field: UITextField, img: UIImage){
         let rightImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height))
         rightImageView.image = img
@@ -52,6 +74,7 @@ import UIKit
         field.rightView?.isUserInteractionEnabled = true
         field.rightView?.addGestureRecognizer(tapGestureRecognizer)
     }
+    */
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         print("Tapped")

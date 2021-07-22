@@ -9,12 +9,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    @IBOutlet weak var profilePic: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        profilePic.layer.cornerRadius = (profilePic.frame.height / 2)
-        profilePic.layer.masksToBounds = true
-
         // Do any additional setup after loading the view.
     }
     
