@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VsX-s3-lt6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ps-XG-3kU">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -809,22 +809,22 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     Add New Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK3-OS-33O">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="45.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uy4-gI-VGC" userLabel="WebsiteLabel">
-                                        <rect key="frame" x="0.0" y="60.333333333333329" width="414" height="45.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="65.333333333333329" width="414" height="50.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDF-pE-hhO" userLabel="WebsiteView">
-                                        <rect key="frame" x="0.0" y="120.66666666666664" width="414" height="45.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="130.66666666666666" width="414" height="50.333333333333343"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Km-RA-5fS" userLabel="WebsiteTextField" customClass="MyCustomTextField" customModule="iPass" customModuleProvider="target">
-                                                <rect key="frame" x="15" y="5" width="384" height="35.333333333333336"/>
+                                                <rect key="frame" x="15" y="5" width="384" height="40.333333333333336"/>
                                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -849,16 +849,16 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      Email / Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFG-dI-DLV" userLabel="EmailLabel">
-                                        <rect key="frame" x="0.0" y="181" width="414" height="45.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="196" width="414" height="50.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBL-IN-kXO" userLabel="EmailView">
-                                        <rect key="frame" x="0.0" y="241.33333333333334" width="414" height="45.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="261.33333333333331" width="414" height="50.333333333333314"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v8y-0G-HHX" userLabel="EmailTextField" customClass="MyCustomTextField" customModule="iPass" customModuleProvider="target">
-                                                <rect key="frame" x="15" y="5" width="384" height="35.333333333333336"/>
+                                                <rect key="frame" x="15" y="5" width="384" height="40.333333333333336"/>
                                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -878,23 +878,20 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      Application Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoK-zQ-98K">
-                                        <rect key="frame" x="0.0" y="301.66666666666669" width="414" height="45.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="326.66666666666669" width="414" height="50.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kr9-2R-PG1" userLabel="AppNameView">
-                                        <rect key="frame" x="0.0" y="362" width="414" height="45"/>
+                                        <rect key="frame" x="0.0" y="392" width="414" height="50.333333333333314"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHn-qo-abV" userLabel="AppNameTextField" customClass="MyCustomTextField" customModule="iPass" customModuleProvider="target">
-                                                <rect key="frame" x="15" y="5" width="384" height="35"/>
+                                                <rect key="frame" x="15" y="5" width="384" height="40.333333333333336"/>
                                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="RightIcon">
-                                                        <imageReference key="value" image="eye" catalog="system" symbolScale="large" renderingMode="original"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="14"/>
                                                     </userDefinedRuntimeAttribute>
@@ -910,16 +907,16 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      Password / Pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-PP-k7j">
-                                        <rect key="frame" x="0.0" y="422" width="414" height="45.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="457.33333333333331" width="414" height="50.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGS-1J-GZ0" userLabel="PasswordView">
-                                        <rect key="frame" x="0.0" y="482.33333333333337" width="414" height="45.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="522.66666666666663" width="414" height="50.333333333333371"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jiz-Cz-N2q" userLabel="PasswordTextField" customClass="MyCustomTextField" customModule="iPass" customModuleProvider="target">
-                                                <rect key="frame" x="15" y="5" width="384" height="35.333333333333336"/>
+                                                <rect key="frame" x="15" y="5" width="384" height="40.333333333333336"/>
                                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -951,16 +948,16 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      Choose an icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INU-Rx-9fw">
-                                        <rect key="frame" x="0.0" y="542.66666666666663" width="414" height="45.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="588" width="414" height="50.333333333333371"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6b-HL-wuK" userLabel="IconScrollView">
-                                        <rect key="frame" x="0.0" y="603" width="414" height="45.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="653.33333333333337" width="414" height="50.333333333333371"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Tv4-3z-Lvc" userLabel="HorizontallyScrollableSV">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="45.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50.333333333333336"/>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -975,32 +972,28 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="mWV-aO-1E5"/>
                                     </scrollView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nd9-jE-Khd" userLabel="SaveAccountView">
-                                        <rect key="frame" x="0.0" y="663.33333333333337" width="414" height="45.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="718.66666666666663" width="414" height="50.333333333333371"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0A-hu-flk" userLabel="SaveAccountButton" customClass="MyCustomButton" customModule="iPass" customModuleProvider="target">
-                                                <rect key="frame" x="15" y="9.9999999999999982" width="384" height="30.333333333333329"/>
+                                                <rect key="frame" x="15" y="0.0" width="384" height="45.333333333333336"/>
                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.50196078431372548" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="26"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="24"/>
                                                 <state key="normal" title="Save Account">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="24"/>
+                                                        <real key="value" value="18"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="D0A-hu-flk" secondAttribute="bottom" constant="5" id="BYI-67-2dp"/>
-                                            <constraint firstItem="D0A-hu-flk" firstAttribute="top" secondItem="Nd9-jE-Khd" secondAttribute="top" constant="10" id="Hrg-Ro-1Dq"/>
+                                            <constraint firstItem="D0A-hu-flk" firstAttribute="top" secondItem="Nd9-jE-Khd" secondAttribute="top" id="Hrg-Ro-1Dq"/>
                                             <constraint firstAttribute="trailing" secondItem="D0A-hu-flk" secondAttribute="trailing" constant="15" id="hD0-0X-KcE"/>
                                             <constraint firstItem="D0A-hu-flk" firstAttribute="leading" secondItem="Nd9-jE-Khd" secondAttribute="leading" constant="15" id="tzm-ZQ-ew2"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNO-FQ-VHR">
-                                        <rect key="frame" x="0.0" y="723.66666666666663" width="414" height="45.333333333333371"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -1043,7 +1036,7 @@
             <size key="intrinsicContentSize" width="86" height="34"/>
         </designable>
         <designable name="D0A-hu-flk">
-            <size key="intrinsicContentSize" width="176" height="38"/>
+            <size key="intrinsicContentSize" width="162" height="36"/>
         </designable>
         <designable name="E7f-pS-CJ3">
             <size key="intrinsicContentSize" width="32" height="34"/>
@@ -1080,8 +1073,8 @@
         <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
-        <image name="lock" width="301" height="227"/>
         <image name="lock" catalog="system" width="128" height="128"/>
+        <image name="lock" width="301" height="227"/>
         <image name="lock.shield" catalog="system" width="128" height="118"/>
         <image name="newprofilepic" width="225" height="225"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
