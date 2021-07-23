@@ -13,17 +13,17 @@ class AddNewPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var imgs = [UIImageView]()
+        var buttons = [UIButton]()
         
         for _ in 0..<10{
-            let myNewImageView = UIImageView()
-            imgs += [myNewImageView]
+            let myNewImageView = UIButton()
+            buttons += [myNewImageView]
         }
-        for myimage in imgs {
-            myimage.image = UIImage(named:"twitter")
-            myimage.contentMode = .scaleAspectFit
-            myimage.widthAnchor.constraint(equalToConstant: 60).isActive=true
-            horizontallyScrollableSV.addArrangedSubview(myimage)
+        for mybutton in buttons {
+            let myimg = UIImage(named:"twitter")
+            mybutton.widthAnchor.constraint(equalToConstant: 60).isActive=true
+            mybutton.setBackgroundImage(myimg, for: .normal)
+            horizontallyScrollableSV.addArrangedSubview(mybutton)
         }
         // Do any additional setup after loading the view.
     }
