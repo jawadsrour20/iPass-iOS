@@ -175,7 +175,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="MyImage" value="eye.slash" catalog="system"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="RightIcon">
-                                                        <imageReference key="value" image="eye.slash" catalog="system" symbolScale="large" renderingMode="original"/>
+                                                        <imageReference key="value" image="eye" catalog="system" symbolScale="large" renderingMode="original"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -447,7 +447,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="MyImage" value="eye.slash" catalog="system"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="RightIcon">
-                                                        <imageReference key="value" image="eye.slash" catalog="system" symbolScale="large" renderingMode="original"/>
+                                                        <imageReference key="value" image="eye" catalog="system" symbolScale="large" renderingMode="original"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -478,7 +478,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="MyImage" value="eye.slash" catalog="system"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="RightIcon">
-                                                        <imageReference key="value" image="eye.slash" catalog="system" symbolScale="large" renderingMode="original"/>
+                                                        <imageReference key="value" image="eye" catalog="system" symbolScale="large" renderingMode="original"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -845,7 +845,7 @@
                                                         <imageReference key="value" image="lock" catalog="system" symbolScale="large" renderingMode="original"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="RightIcon">
-                                                        <imageReference key="value" image="eye.slash" catalog="system" symbolScale="large" renderingMode="original"/>
+                                                        <imageReference key="value" image="eye" catalog="system" symbolScale="large" renderingMode="original"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -983,13 +983,14 @@
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="customImg" width="72" height="79"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="facebook" width="200" height="200"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="google" width="200" height="200"/>
-        <image name="lock" catalog="system" width="128" height="128"/>
         <image name="lock" width="301" height="227"/>
+        <image name="lock" catalog="system" width="128" height="128"/>
         <image name="lock.shield" catalog="system" width="128" height="118"/>
         <image name="newprofilepic" width="225" height="225"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>

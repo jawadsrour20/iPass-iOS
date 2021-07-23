@@ -81,6 +81,15 @@ import UIKit
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         print("Tapped")
+        let largeConfig = UIImage.SymbolConfiguration(scale: .large)
+        if (self.isSecureTextEntry == true){
+            RightIcon = UIImage(systemName: "eye", withConfiguration:largeConfig)!.withRenderingMode(.alwaysOriginal)
+            self.isSecureTextEntry = false
+        }
+        else{
+            self.isSecureTextEntry = true
+            RightIcon = UIImage(systemName: "eye.slash", withConfiguration:largeConfig)!.withRenderingMode(.alwaysOriginal)
+        }
     }
 
 }
