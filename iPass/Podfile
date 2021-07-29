@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# supporting ios 14.3 and above
+platform :ios, '14.3'
+
+target 'iPass' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iPass
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'IQKeyboardManager'
+
+end

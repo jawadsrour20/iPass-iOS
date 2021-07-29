@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,7 @@
 		183B3DB626A6DA81007D8A31 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B3DB526A6DA81007D8A31 /* CreateAccountViewController.swift */; };
 		183D7E4126A4DBBB00858D9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D7E4026A4DBBB00858D9B /* AppDelegate.swift */; };
 		183D7E4326A4DBBB00858D9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D7E4226A4DBBB00858D9B /* SceneDelegate.swift */; };
-		183D7E4526A4DBBB00858D9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D7E4426A4DBBB00858D9B /* ViewController.swift */; };
+		183D7E4526A4DBBB00858D9B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D7E4426A4DBBB00858D9B /* LoginViewController.swift */; };
 		183D7E4826A4DBBB00858D9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183D7E4626A4DBBB00858D9B /* Main.storyboard */; };
 		183D7E4A26A4DBBD00858D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183D7E4926A4DBBD00858D9B /* Assets.xcassets */; };
 		183D7E4D26A4DBBD00858D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183D7E4B26A4DBBD00858D9B /* LaunchScreen.storyboard */; };
@@ -24,6 +24,10 @@
 		183DB42226AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183DB42126AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift */; };
 		184A3DEB26A767E900ED2FE8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A3DEA26A767E900ED2FE8 /* SettingsViewController.swift */; };
 		184A3DF226A77E9200ED2FE8 /* AddNewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A3DF126A77E9200ED2FE8 /* AddNewPasswordViewController.swift */; };
+		473673DF26AE313D0074709E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 473673DE26AE313D0074709E /* GoogleService-Info.plist */; };
+		473673E126AE4A7F0074709E /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473673E026AE4A7F0074709E /* RootTabBarController.swift */; };
+		47BED4A926B3401D0082E7F1 /* PasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */; };
+		EC68B951B8C9FDC09CB177E0 /* Pods_iPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F09EB06B5F645BCFF73E1B /* Pods_iPass.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +37,7 @@
 		183D7E3D26A4DBBB00858D9B /* iPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		183D7E4026A4DBBB00858D9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183D7E4226A4DBBB00858D9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		183D7E4426A4DBBB00858D9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		183D7E4426A4DBBB00858D9B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		183D7E4726A4DBBB00858D9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		183D7E4926A4DBBD00858D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		183D7E4C26A4DBBD00858D9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +50,12 @@
 		183DB42126AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritePasswordsTableViewCell.swift; sourceTree = "<group>"; };
 		184A3DEA26A767E900ED2FE8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		184A3DF126A77E9200ED2FE8 /* AddNewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPasswordViewController.swift; sourceTree = "<group>"; };
+		473673DE26AE313D0074709E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		473673E026AE4A7F0074709E /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewController.swift; sourceTree = "<group>"; };
+		830FAD8324290A265894C469 /* Pods-iPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPass.release.xcconfig"; path = "Target Support Files/Pods-iPass/Pods-iPass.release.xcconfig"; sourceTree = "<group>"; };
+		99F09EB06B5F645BCFF73E1B /* Pods_iPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E39FD12A664B1A85977D7CF /* Pods-iPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPass.debug.xcconfig"; path = "Target Support Files/Pods-iPass/Pods-iPass.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +63,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC68B951B8C9FDC09CB177E0 /* Pods_iPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0648578569D0CB112A324B57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E39FD12A664B1A85977D7CF /* Pods-iPass.debug.xcconfig */,
+				830FAD8324290A265894C469 /* Pods-iPass.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		183D7E3426A4DBBB00858D9B = {
 			isa = PBXGroup;
 			children = (
 				183D7E3F26A4DBBB00858D9B /* iPass */,
 				183D7E3E26A4DBBB00858D9B /* Products */,
+				0648578569D0CB112A324B57 /* Pods */,
+				3AEBE3CE0170CC6A9BECF906 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,11 +102,12 @@
 			children = (
 				183D7E4026A4DBBB00858D9B /* AppDelegate.swift */,
 				183D7E4226A4DBBB00858D9B /* SceneDelegate.swift */,
-				183D7E4426A4DBBB00858D9B /* ViewController.swift */,
+				183D7E4426A4DBBB00858D9B /* LoginViewController.swift */,
 				183D7E4626A4DBBB00858D9B /* Main.storyboard */,
 				183D7E4926A4DBBD00858D9B /* Assets.xcassets */,
 				183D7E4B26A4DBBD00858D9B /* LaunchScreen.storyboard */,
 				183D7E4E26A4DBBD00858D9B /* Info.plist */,
+				473673DE26AE313D0074709E /* GoogleService-Info.plist */,
 				183D7E5526A4E28500858D9B /* MyCustomView.swift */,
 				183B3DAE26A6BC50007D8A31 /* MyCustomButton.swift */,
 				183B3DB526A6DA81007D8A31 /* CreateAccountViewController.swift */,
@@ -96,8 +119,18 @@
 				183DB41E26AA2651004AEDCF /* MyFavoritePasswordsTableViewController.swift */,
 				183DB41826AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift */,
 				183DB42126AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift */,
+				473673E026AE4A7F0074709E /* RootTabBarController.swift */,
+				47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */,
 			);
 			path = iPass;
+			sourceTree = "<group>";
+		};
+		3AEBE3CE0170CC6A9BECF906 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99F09EB06B5F645BCFF73E1B /* Pods_iPass.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 183D7E5126A4DBBD00858D9B /* Build configuration list for PBXNativeTarget "iPass" */;
 			buildPhases = (
+				22F42BB7E97A50DA3E6F5903 /* [CP] Check Pods Manifest.lock */,
 				183D7E3926A4DBBB00858D9B /* Sources */,
 				183D7E3A26A4DBBB00858D9B /* Frameworks */,
 				183D7E3B26A4DBBB00858D9B /* Resources */,
+				9887D1EE2DD962FA95542D34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				183D7E4D26A4DBBD00858D9B /* LaunchScreen.storyboard in Resources */,
+				473673DF26AE313D0074709E /* GoogleService-Info.plist in Resources */,
 				183D7E4A26A4DBBD00858D9B /* Assets.xcassets in Resources */,
 				183D7E4826A4DBBB00858D9B /* Main.storyboard in Resources */,
 			);
@@ -165,17 +201,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22F42BB7E97A50DA3E6F5903 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9887D1EE2DD962FA95542D34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPass/Pods-iPass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPass/Pods-iPass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPass/Pods-iPass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		183D7E3926A4DBBB00858D9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				184A3DF226A77E9200ED2FE8 /* AddNewPasswordViewController.swift in Sources */,
+				473673E126AE4A7F0074709E /* RootTabBarController.swift in Sources */,
 				183B3DB626A6DA81007D8A31 /* CreateAccountViewController.swift in Sources */,
 				183DB41926AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift in Sources */,
 				183B3DAF26A6BC50007D8A31 /* MyCustomButton.swift in Sources */,
 				183DB41626A9FE5F004AEDCF /* MyPasswordsPageTableViewController.swift in Sources */,
-				183D7E4526A4DBBB00858D9B /* ViewController.swift in Sources */,
+				47BED4A926B3401D0082E7F1 /* PasswordDetailsViewController.swift in Sources */,
+				183D7E4526A4DBBB00858D9B /* LoginViewController.swift in Sources */,
 				183DB42226AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift in Sources */,
 				183DB41F26AA2651004AEDCF /* MyFavoritePasswordsTableViewController.swift in Sources */,
 				18394A2D26A742A300E85298 /* MyCustomTextField.swift in Sources */,
@@ -327,16 +407,18 @@
 		};
 		183D7E5226A4DBBD00858D9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E39FD12A664B1A85977D7CF /* Pods-iPass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AUPG755Y5;
 				INFOPLIST_FILE = iPass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lb.edu.aub.iPass;
+				PRODUCT_BUNDLE_IDENTIFIER = ipass.jhs07;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,16 +427,18 @@
 		};
 		183D7E5326A4DBBD00858D9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 830FAD8324290A265894C469 /* Pods-iPass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AUPG755Y5;
 				INFOPLIST_FILE = iPass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lb.edu.aub.iPass;
+				PRODUCT_BUNDLE_IDENTIFIER = ipass.jhs07;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

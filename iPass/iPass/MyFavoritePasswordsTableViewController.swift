@@ -6,33 +6,70 @@
 //
 
 import UIKit
-
+import Firebase
 class MyFavoritePasswordsTableViewController: UITableViewController {
 
-    var favoriteItems = [ItemCell]()
+    var favoriteStoredAccounts = [ItemCell]()
+    
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.hidesBackButton = true
+        
+        loadSavedAccounts()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        let img1 = UIImage(named:"twitter")
-        let img2 = UIImage(named:"google")
-        let item1 = ItemCell("Google","mfa68@gmail.com",img1)
-        let item2 = ItemCell("Facebook","dee01@aub.com",img2)
-        let item3 = ItemCell("Google","mfa68@gmail.com",img1)
-        let item4 = ItemCell("Facebook","dee01@aub.com",img2)
-        let item5 = ItemCell("Google","mfa68@gmail.com",img1)
-        let item6 = ItemCell("Facebook","dee01@aub.com",img2)
-        let item7 = ItemCell("Google","mfa68@gmail.com",img1)
-        let item8 = ItemCell("Facebook","dee01@aub.com",img2)
-        let item9 = ItemCell("Google","mfa68@gmail.com",img1)
-        let item10 = ItemCell("Facebook","dee01@aub.com",img2)
+
         
-        favoriteItems += [item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item2,item2,item2,item2,item2,item2,item2,item2,item2,item2,item2,item2,item2]
+
     }
+    
+    
+    func loadSavedAccounts() {
+        
+        db.collection("StoredPasswords")
+            .addSnapshotListener { (querySnapshot, error) in
+            
+            // to prevent duplicate loading...
+            self.favoriteStoredAccounts = []
+            
+            if let e = error {
+                print("There was an issue retrieving data from Firestore. \(e)")
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        
+                        if let applicationName = data["applicationName"] as? String,
+                           let email = data["email"] as? String,
+                           let iconName = data["iconName"] as? String,
+                           let isFavorite = data["isFavorite"] as? Bool,
+                           let password = data["password"] as? String,
+                           let savedAccountOwner = data["savedAccountOwner"] as? String,
+                           let website = data["website"] as? String
+                        {
+                            if isFavorite == true && savedAccountOwner ==  Auth.auth().currentUser?.email
+                            {
+                            
+                                let loadedStoredAccount = ItemCell(email, password, applicationName, iconName, isFavorite, savedAccountOwner, website)
+                                self.favoriteStoredAccounts.append(loadedStoredAccount!)
+                            }
+                            DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
 
     // MARK: - Table view data source
 
@@ -43,20 +80,20 @@ class MyFavoritePasswordsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return favoriteItems.count
+        return favoriteStoredAccounts.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyFavoriteReusableCell", for: indexPath) as! MyFavoritePasswordsTableViewCell
         
-        let item = favoriteItems[indexPath.row]
-        
-        cell.FavoriteAppName.text = item.AppName
-        cell.FavoriteMail.text = item.Mail
-        cell.FavoriteImageView.image = item.ImageView
-        // Configure the cell...
+        let item = favoriteStoredAccounts[indexPath.row]
 
+        cell.FavoriteAppName.text = item.applicationName
+        cell.FavoriteMail.text = item.email
+        cell.FavoriteImageView.image = UIImage(named: "\(item.iconName ?? "Default")")
+
+        
         return cell
     }
 
