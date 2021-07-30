@@ -13,6 +13,8 @@ class MyPasswordsPageTableViewController: UITableViewController {
     
     var loadedStoredAccounts = [ItemCell]()
     
+    var filteredData = [ItemCell]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
