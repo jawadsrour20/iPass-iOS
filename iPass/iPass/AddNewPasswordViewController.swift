@@ -7,6 +7,33 @@
 
 import UIKit
 import Firebase
+
+
+extension UIViewController {
+
+    // reference
+    //  https://stackoverflow.com/questions/31540375/how-to-create-a-toast-message-in-swift
+func showToast(message : String, font: UIFont) {
+
+    let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-720, width: 150, height: 35))
+    toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+    toastLabel.textColor = UIColor.white
+    toastLabel.font = font
+    toastLabel.textAlignment = .center;
+    toastLabel.text = message
+    toastLabel.alpha = 1.0
+    toastLabel.layer.cornerRadius = 10;
+    toastLabel.clipsToBounds  =  true
+    self.view.addSubview(toastLabel)
+    UIView.animate(withDuration: 5.0, delay: 0.1, options: .curveEaseOut, animations: {
+         toastLabel.alpha = 0.0
+    }, completion: {(isCompleted) in
+        toastLabel.removeFromSuperview()
+    })
+} }
+
+
+
 class AddNewPasswordViewController: UIViewController {
 
     
@@ -171,6 +198,16 @@ class AddNewPasswordViewController: UIViewController {
             }
         }
         
+        if ( websiteName.text == "" || applicationName.text == "" || userEmail.text == "" || userPassword.text == "")
+        {
+            let alert = UIAlertController(title: "Failed to Save Password!", message: "Make sure you provided input for all fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else
+        {
         if let tempWebsite = websiteName.text, let tempApplicationName = applicationName.text,
            let tempAccountEmail = userEmail.text, let tempAccountPassword = userPassword.text,
            let storedAccountOwner = Auth.auth().currentUser?.email
@@ -201,6 +238,13 @@ class AddNewPasswordViewController: UIViewController {
                     }
                 }
         }
+        
+        for icon in icons{
+            icon.layer.borderWidth = 0
+            icon.layer.borderColor = nil
+        }
+        
+        self.showToast(message: "Password Saved!", font: .systemFont(ofSize: 12.0))
     }
-    
+    }
 }

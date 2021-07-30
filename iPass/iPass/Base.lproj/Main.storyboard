@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWV-ZG-guc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWV-ZG-guc">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,7 +25,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyFavoriteReusableCell" rowHeight="107" id="QYg-Ph-D2d" customClass="MyFavoritePasswordsTableViewCell" customModule="iPass" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="107"/>
+                                <rect key="frame" x="0.0" y="68.5" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QYg-Ph-D2d" id="ThA-Mr-lIa">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
@@ -66,6 +66,7 @@
                                     <outlet property="FavoriteAppName" destination="HqM-Ih-o6e" id="Nn8-vo-ADk"/>
                                     <outlet property="FavoriteImageView" destination="SrW-7j-vzq" id="kaJ-Wa-Ie1"/>
                                     <outlet property="FavoriteMail" destination="OdU-Td-R8X" id="poz-6n-cFa"/>
+                                    <segue destination="bQY-OH-lWc" kind="show" identifier="favoritePasswordDetails" id="UtX-bi-mK5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -360,7 +361,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyReusableCell" rowHeight="107" id="AZG-es-2Db" customClass="MyPasswordsTableViewCell" customModule="iPass" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="107"/>
+                                <rect key="frame" x="0.0" y="68.5" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AZG-es-2Db" id="1vF-9o-UxN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
@@ -1067,7 +1068,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VJ-N4-BVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="7zr-8X-x30"/>
             </objects>
-            <point key="canvasLocation" x="-1894.2028985507247" y="1034.5982142857142"/>
+            <point key="canvasLocation" x="-984" y="1010"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rwV-AZ-CNy">
@@ -1087,13 +1088,94 @@
             </objects>
             <point key="canvasLocation" x="-5749.275362318841" y="339.50892857142856"/>
         </scene>
+        <!--Favorite Password Details View Controller-->
+        <scene sceneID="FJg-pr-ORD">
+            <objects>
+                <viewController id="bQY-OH-lWc" userLabel="Favorite Password Details View Controller" customClass="FavoritePasswordDetailsViewController" customModule="iPass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udt-8k-diC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="AOy-fZ-mJR">
+                                <rect key="frame" x="0.0" y="173.5" width="414" height="549"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wJ-4l-1cJ">
+                                        <rect key="frame" x="167.5" y="0.0" width="79.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vym-qF-FaM">
+                                        <rect key="frame" x="41.5" y="72.5" width="331" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bQY-OH-lWc" id="1Ct-0k-iUW"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gY-Az-VyG">
+                                        <rect key="frame" x="112" y="158.5" width="190" height="173"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgj-v4-P58">
+                                        <rect key="frame" x="167" y="383.5" width="80.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEc-vq-H2d">
+                                        <rect key="frame" x="186.5" y="456" width="41" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sou-Q2-EyU">
+                                        <rect key="frame" x="176" y="528.5" width="62" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vym-qF-FaM" firstAttribute="width" secondItem="AOy-fZ-mJR" secondAttribute="width" multiplier="0.8" id="Z4F-WB-WFS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gwK-nW-jT7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AOy-fZ-mJR" firstAttribute="centerX" secondItem="udt-8k-diC" secondAttribute="centerX" id="JJo-xF-KqS"/>
+                            <constraint firstItem="AOy-fZ-mJR" firstAttribute="centerY" secondItem="udt-8k-diC" secondAttribute="centerY" id="PUQ-Rk-GSO"/>
+                            <constraint firstItem="AOy-fZ-mJR" firstAttribute="width" secondItem="udt-8k-diC" secondAttribute="width" id="yhR-n8-yZf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="omi-n1-D5y">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="R5k-Ua-XNs">
+                            <connections>
+                                <segue destination="hxA-NY-AxB" kind="unwind" unwindAction="unwindToItemListWithSender:" id="s8o-lH-lOT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="applicationName" destination="Fgj-v4-P58" id="Dzr-qB-Bvt"/>
+                        <outlet property="email" destination="VEc-vq-H2d" id="bWG-83-poa"/>
+                        <outlet property="iconImage" destination="7gY-Az-VyG" id="bOK-Ld-qAL"/>
+                        <outlet property="passwordTextfield" destination="Vym-qF-FaM" id="TYH-fm-FDJ"/>
+                        <outlet property="saveButton" destination="R5k-Ua-XNs" id="1r5-nF-nAh"/>
+                        <outlet property="website" destination="sou-Q2-EyU" id="MBB-PI-Foy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXn-wo-uzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hxA-NY-AxB" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-2101" y="1035"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="0e5-dd-s5i">
             <size key="intrinsicContentSize" width="99" height="41"/>
         </designable>
         <designable name="7Km-RA-5fS">
-            <size key="intrinsicContentSize" width="39" height="18.5"/>
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
         </designable>
         <designable name="91O-cV-LsG">
             <size key="intrinsicContentSize" width="86" height="34"/>
@@ -1102,13 +1184,13 @@
             <size key="intrinsicContentSize" width="162" height="36"/>
         </designable>
         <designable name="E7f-pS-CJ3">
-            <size key="intrinsicContentSize" width="46" height="18.5"/>
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
         </designable>
         <designable name="FBv-DN-E02">
             <size key="intrinsicContentSize" width="4" height="18.5"/>
         </designable>
         <designable name="Jiz-Cz-N2q">
-            <size key="intrinsicContentSize" width="78" height="18.5"/>
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
         </designable>
         <designable name="aRZ-2u-R6p">
             <size key="intrinsicContentSize" width="4" height="18.5"/>
@@ -1117,7 +1199,7 @@
             <size key="intrinsicContentSize" width="76" height="34"/>
         </designable>
         <designable name="fv7-F4-yNn">
-            <size key="intrinsicContentSize" width="46" height="18.5"/>
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
         </designable>
         <designable name="nHn-qo-abV">
             <size key="intrinsicContentSize" width="4" height="18.5"/>
@@ -1140,18 +1222,18 @@
         <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
-        <image name="lock" catalog="system" width="128" height="128"/>
         <image name="lock" width="150.5" height="113.5"/>
+        <image name="lock" catalog="system" width="128" height="128"/>
         <image name="lock.shield" catalog="system" width="128" height="118"/>
         <image name="newprofilepic" width="112.5" height="112.5"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="bigSVcolor">
-            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonscolor">
-            <color red="0.98039215686274506" green="0.50196078431372548" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98000001907348633" green="0.50199997425079346" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="labelsinloginandcreatepagecolor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

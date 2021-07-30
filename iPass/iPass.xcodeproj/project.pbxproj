@@ -27,6 +27,7 @@
 		473673DF26AE313D0074709E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 473673DE26AE313D0074709E /* GoogleService-Info.plist */; };
 		473673E126AE4A7F0074709E /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473673E026AE4A7F0074709E /* RootTabBarController.swift */; };
 		47BED4A926B3401D0082E7F1 /* PasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */; };
+		47BED4AB26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BED4AA26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift */; };
 		EC68B951B8C9FDC09CB177E0 /* Pods_iPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F09EB06B5F645BCFF73E1B /* Pods_iPass.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		473673DE26AE313D0074709E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		473673E026AE4A7F0074709E /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewController.swift; sourceTree = "<group>"; };
+		47BED4AA26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePasswordDetailsViewController.swift; sourceTree = "<group>"; };
 		830FAD8324290A265894C469 /* Pods-iPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPass.release.xcconfig"; path = "Target Support Files/Pods-iPass/Pods-iPass.release.xcconfig"; sourceTree = "<group>"; };
 		99F09EB06B5F645BCFF73E1B /* Pods_iPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E39FD12A664B1A85977D7CF /* Pods-iPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPass.debug.xcconfig"; path = "Target Support Files/Pods-iPass/Pods-iPass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				183DB42126AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift */,
 				473673E026AE4A7F0074709E /* RootTabBarController.swift */,
 				47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */,
+				47BED4AA26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift */,
 			);
 			path = iPass;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				183B3DB626A6DA81007D8A31 /* CreateAccountViewController.swift in Sources */,
 				183DB41926AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift in Sources */,
 				183B3DAF26A6BC50007D8A31 /* MyCustomButton.swift in Sources */,
+				47BED4AB26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift in Sources */,
 				183DB41626A9FE5F004AEDCF /* MyPasswordsPageTableViewController.swift in Sources */,
 				47BED4A926B3401D0082E7F1 /* PasswordDetailsViewController.swift in Sources */,
 				183D7E4526A4DBBB00858D9B /* LoginViewController.swift in Sources */,

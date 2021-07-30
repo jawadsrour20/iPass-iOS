@@ -13,8 +13,6 @@ class MyPasswordsPageTableViewController: UITableViewController {
     
     var loadedStoredAccounts = [ItemCell]()
     
-    var filteredData = [ItemCell]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
@@ -95,18 +93,111 @@ class MyPasswordsPageTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-         if (editingStyle == UITableViewCell.EditingStyle.delete)
-         {
-             
-            let recordToRemove = loadedStoredAccounts[indexPath.row]
+    
+    // this below commented method is working for case of needing to delete a row
+    // but it has code implementation for "Delete" only ( just 1 option) ... so I wrote an alternative
+    // which has more options
+    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//         if (editingStyle == UITableViewCell.EditingStyle.delete)
+//         {
+//
+//            let recordToRemove = loadedStoredAccounts[indexPath.row]
+//
+////            self.db.collection("StoredPasswords").whereField("applicationName", isEqualTo: "\(String(describing: recordToRemove.applicationName))")
+//            db.collection("StoredPasswords").getDocuments { (snapshot, err) in
+//
+//                for document in snapshot!.documents {
+//                    let data = document.data()
+//
+//                    if let applicationName = data["applicationName"] as? String,
+//                       let email = data["email"] as? String,
+//                       let _ = data["iconName"] as? String,
+//                       let isFavorite = data["isFavorite"] as? Bool,
+//                       let password = data["password"] as? String,
+//                       let savedAccountOwner = data["savedAccountOwner"] as? String,
+//                       let website = data["website"] as? String
+//                    {
+//                        if applicationName == recordToRemove.applicationName &&
+//                            email == recordToRemove.email && isFavorite == recordToRemove.isFavorite
+//                            && password == recordToRemove.password && savedAccountOwner == recordToRemove.savedAccountOwner
+//                            && website == recordToRemove.website{
+//
+//                            self.db.collection("StoredPasswords").document("\(document.documentID)").delete() {
+//                                err in if let err = err {
+//                                    print("Error removing document: \(err)")
+//                                } else {
+//                                    print("Document successfully removed!")
+//                                }
+//                            }
+//
+//                        }
+//                    }
+//                }
+//            }
+//            loadedStoredAccounts.remove(at: indexPath.row)
+//
+//            self.tableView.reloadData()
+//         }
+//
+//     }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+       
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [self] (action, view, completion) in
             
+            
+            
+                        let recordToRemove = loadedStoredAccounts[indexPath.row]
+            
+            //            self.db.collection("StoredPasswords").whereField("applicationName", isEqualTo: "\(String(describing: recordToRemove.applicationName))")
+                        db.collection("StoredPasswords").getDocuments { (snapshot, err) in
+            
+                            for document in snapshot!.documents {
+                                let data = document.data()
+            
+                                if let applicationName = data["applicationName"] as? String,
+                                   let email = data["email"] as? String,
+                                   let _ = data["iconName"] as? String,
+                                   let isFavorite = data["isFavorite"] as? Bool,
+                                   let password = data["password"] as? String,
+                                   let savedAccountOwner = data["savedAccountOwner"] as? String,
+                                   let website = data["website"] as? String
+                                {
+                                    if applicationName == recordToRemove.applicationName &&
+                                        email == recordToRemove.email && isFavorite == recordToRemove.isFavorite
+                                        && password == recordToRemove.password && savedAccountOwner == recordToRemove.savedAccountOwner
+                                        && website == recordToRemove.website{
+            
+                                        self.db.collection("StoredPasswords").document("\(document.documentID)").delete() {
+                                            err in if let err = err {
+                                                print("Error removing document: \(err)")
+                                            } else {
+                                                print("Document successfully removed!")
+                                            }
+                                        }
+            
+                                    }
+                                }
+                            }
+                        }
+                        loadedStoredAccounts.remove(at: indexPath.row)
+            
+                        self.tableView.reloadData()
+            
+                        completion(true)
+        }
+        
+        let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { [self] (action, view, completion) in
+            
+            let recordAddedToFavorites = loadedStoredAccounts[indexPath.row]
+
 //            self.db.collection("StoredPasswords").whereField("applicationName", isEqualTo: "\(String(describing: recordToRemove.applicationName))")
             db.collection("StoredPasswords").getDocuments { (snapshot, err) in
-                
+
                 for document in snapshot!.documents {
                     let data = document.data()
-                    
+
                     if let applicationName = data["applicationName"] as? String,
                        let email = data["email"] as? String,
                        let _ = data["iconName"] as? String,
@@ -115,28 +206,36 @@ class MyPasswordsPageTableViewController: UITableViewController {
                        let savedAccountOwner = data["savedAccountOwner"] as? String,
                        let website = data["website"] as? String
                     {
-                        if applicationName == recordToRemove.applicationName &&
-                            email == recordToRemove.email && isFavorite == recordToRemove.isFavorite
-                            && password == recordToRemove.password && savedAccountOwner == recordToRemove.savedAccountOwner
-                            && website == recordToRemove.website{
-                            
-                            self.db.collection("StoredPasswords").document("\(document.documentID)").delete() {
-                                err in if let err = err {
-                                    print("Error removing document: \(err)")
+                        if applicationName == recordAddedToFavorites.applicationName &&
+                            email == recordAddedToFavorites.email && isFavorite == recordAddedToFavorites.isFavorite
+                            && password == recordAddedToFavorites.password && savedAccountOwner == recordAddedToFavorites.savedAccountOwner
+                            && website == recordAddedToFavorites.website{
+
+                            self.db.collection("StoredPasswords").document("\(document.documentID)").updateData([
+                                "isFavorite": true
+                            ]) { err in
+                                if let err = err {
+                                    print("Error updating document: \(err)")
                                 } else {
-                                    print("Document successfully removed!")
+                                    print("Document successfully updated")
                                 }
                             }
-                            
+
                         }
                     }
                 }
             }
             loadedStoredAccounts.remove(at: indexPath.row)
-                
             self.tableView.reloadData()
-         }
-     }
+            completion(true)
+        }
+        
+        favoriteAction.backgroundColor = .systemYellow
+        
+        let config = UISwipeActionsConfiguration(actions: [deleteAction, favoriteAction])
+        config.performsFirstActionWithFullSwipe = false
+        return config
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -254,7 +353,7 @@ class MyPasswordsPageTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
