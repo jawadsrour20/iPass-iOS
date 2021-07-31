@@ -87,13 +87,7 @@ class MyPasswordsPageTableViewController: UITableViewController, UISearchBarDele
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-//
-//        if !filteredData.isEmpty{
-//        return filteredData.count
-//        }
-//        else {
-//            return loadedStoredAccounts.count
-//    }
+
         return filteredData.count
         
     }
@@ -102,12 +96,7 @@ class MyPasswordsPageTableViewController: UITableViewController, UISearchBarDele
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyReusableCell", for: indexPath) as! MyPasswordsTableViewCell
         
-//        var item = loadedStoredAccounts[indexPath.row]
-//
-//        if !filteredData.isEmpty
-//        {
-//            item = filteredData[indexPath.row]
-//        }
+
         let item = filteredData[indexPath.row]
 
         cell.AppNameInCell.text = item.applicationName
@@ -171,7 +160,7 @@ class MyPasswordsPageTableViewController: UITableViewController, UISearchBarDele
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [self] (action, view, completion) in
             
             
-            let alert = UIAlertController(title: nil, message: "Are you sure you'd like to delete this cell", preferredStyle: .alert)
+            let alert = UIAlertController(title: nil, message: "Are you sure you want to delete this item?", preferredStyle: .alert)
 
                 // yes action
                 let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in

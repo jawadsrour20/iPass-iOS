@@ -7,18 +7,24 @@
 
 import UIKit
 import Firebase
-class MyFavoritePasswordsTableViewController: UITableViewController {
+class MyFavoritePasswordsTableViewController: UITableViewController, UISearchBarDelegate {
 
     var favoriteStoredAccounts = [ItemCell]()
+    var filteredData = [ItemCell]()
     
     let db = Firestore.firestore()
+
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchBar.delegate = self
         navigationItem.hidesBackButton = true
         
         loadSavedAccounts()
+        
+        filteredData = favoriteStoredAccounts
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -60,7 +66,9 @@ class MyFavoritePasswordsTableViewController: UITableViewController {
                                 let loadedStoredAccount = ItemCell(email, password, applicationName, iconName, isFavorite, savedAccountOwner, website)
                                 self.favoriteStoredAccounts.append(loadedStoredAccount!)
                             }
+                            
                             DispatchQueue.main.async {
+                            self.filteredData = self.favoriteStoredAccounts
                             self.tableView.reloadData()
                             }
                         }
@@ -80,14 +88,14 @@ class MyFavoritePasswordsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return favoriteStoredAccounts.count
+        return filteredData.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyFavoriteReusableCell", for: indexPath) as! MyFavoritePasswordsTableViewCell
         
-        let item = favoriteStoredAccounts[indexPath.row]
+        let item = filteredData[indexPath.row]
 
         cell.FavoriteAppName.text = item.applicationName
         cell.FavoriteMail.text = item.email
@@ -101,6 +109,12 @@ class MyFavoritePasswordsTableViewController: UITableViewController {
        
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [self] (action, view, completion) in
             
+            
+            let alert = UIAlertController(title: nil, message: "Are you sure you want to delete this item?", preferredStyle: .alert)
+
+                // yes action
+                let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
+                    
                         let recordToRemove = favoriteStoredAccounts[indexPath.row]
             
             //            self.db.collection("StoredPasswords").whereField("applicationName", isEqualTo: "\(String(describing: recordToRemove.applicationName))")
@@ -141,7 +155,14 @@ class MyFavoritePasswordsTableViewController: UITableViewController {
             
             completion(true)
         }
-        
+            alert.addAction(yesAction)
+
+             // cancel action
+             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+             present(alert, animated: true, completion: nil)
+            
+    }
         let unFavoriteAction = UIContextualAction(style: .normal, title: "Unfavorite") { [self] (action, view, completion) in
             
             let recordRemovedFromFavorites = favoriteStoredAccounts[indexPath.row]
@@ -336,5 +357,25 @@ class MyFavoritePasswordsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredData = []
+        
+        
+        if searchText == ""
+        {
+            filteredData = favoriteStoredAccounts
+        }
+        else{
+            
+        for account in favoriteStoredAccounts {
+            
+            if account.applicationName.lowercased().contains(searchText.lowercased()) {
+                filteredData.append(account)
+            }
+            }
+        }
+        self.tableView.reloadData()
+    }
 }
