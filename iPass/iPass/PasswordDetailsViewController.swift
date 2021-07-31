@@ -12,6 +12,7 @@ class PasswordDetailsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var website: UILabel!
+
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var applicationName: UILabel!
     @IBOutlet weak var passwordTextfield: UITextField!
@@ -52,15 +53,18 @@ class PasswordDetailsViewController: UIViewController, UITextFieldDelegate {
         // button == saveButton always returns false
         // because it checks for reference (memory addresses)
         
+        
+        
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
         
+        if segue.destination is MyPasswordsPageTableViewController{
         
         newPassword = passwordTextfield.text
         // Set the meal to be passed to MealTableViewController after the unwind segue.
-        
+        }
     }
     
 

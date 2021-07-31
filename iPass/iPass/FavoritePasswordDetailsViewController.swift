@@ -14,7 +14,8 @@ class FavoritePasswordDetailsViewController: UIViewController, UITextFieldDelega
     @IBOutlet weak var website: UILabel!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var iconImage: UIImageView!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+  
+    @IBOutlet weak var saveButtonn: UIBarButtonItem!
     
     var selectedItem : ItemCell?
     var newPassword : String?
@@ -51,15 +52,15 @@ class FavoritePasswordDetailsViewController: UIViewController, UITextFieldDelega
         // button == saveButton always returns false
         // because it checks for reference (memory addresses)
         
-        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+        guard let button = sender as? UIBarButtonItem, button === saveButtonn else {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
         
-        
+        if segue.destination is MyFavoritePasswordsTableViewController{
         newPassword = passwordTextfield.text
         // Set the meal to be passed to MealTableViewController after the unwind segue.
-        
+        }
     }
     
 

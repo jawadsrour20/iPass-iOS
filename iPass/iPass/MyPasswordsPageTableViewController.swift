@@ -7,17 +7,23 @@
 
 import UIKit
 import Firebase
-class MyPasswordsPageTableViewController: UITableViewController {
+class MyPasswordsPageTableViewController: UITableViewController, UISearchBarDelegate {
 
     let db = Firestore.firestore()
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var loadedStoredAccounts = [ItemCell]()
+    var filteredData = [ItemCell]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
         navigationItem.hidesBackButton = true
         
         loadSavedAccounts()
+        
+        filteredData = loadedStoredAccounts
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -57,7 +63,10 @@ class MyPasswordsPageTableViewController: UITableViewController {
                                 let loadedStoredAccount = ItemCell(email, password, applicationName, iconName, isFavorite, savedAccountOwner, website)
                                 self.loadedStoredAccounts.append(loadedStoredAccount!)
                             }
+                            
                             DispatchQueue.main.async {
+                                
+                                self.filteredData = self.loadedStoredAccounts
                             self.tableView.reloadData()
                             }
                         }
@@ -65,6 +74,7 @@ class MyPasswordsPageTableViewController: UITableViewController {
                 }
             }
         }
+
     }
     
 
@@ -77,15 +87,29 @@ class MyPasswordsPageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return loadedStoredAccounts.count
+//
+//        if !filteredData.isEmpty{
+//        return filteredData.count
+//        }
+//        else {
+//            return loadedStoredAccounts.count
+//    }
+        return filteredData.count
+        
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyReusableCell", for: indexPath) as! MyPasswordsTableViewCell
         
-        let item = loadedStoredAccounts[indexPath.row]
-        
+//        var item = loadedStoredAccounts[indexPath.row]
+//
+//        if !filteredData.isEmpty
+//        {
+//            item = filteredData[indexPath.row]
+//        }
+        let item = filteredData[indexPath.row]
+
         cell.AppNameInCell.text = item.applicationName
         cell.EmailInCell.text = item.email
         cell.MyImageInCell.image = UIImage(named: "\(item.iconName)")
@@ -147,7 +171,10 @@ class MyPasswordsPageTableViewController: UITableViewController {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [self] (action, view, completion) in
             
             
-            
+            let alert = UIAlertController(title: nil, message: "Are you sure you'd like to delete this cell", preferredStyle: .alert)
+
+                // yes action
+                let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
                         let recordToRemove = loadedStoredAccounts[indexPath.row]
             
             //            self.db.collection("StoredPasswords").whereField("applicationName", isEqualTo: "\(String(describing: recordToRemove.applicationName))")
@@ -186,6 +213,14 @@ class MyPasswordsPageTableViewController: UITableViewController {
                         self.tableView.reloadData()
             
                         completion(true)
+                }
+            
+            alert.addAction(yesAction)
+
+             // cancel action
+             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+             present(alert, animated: true, completion: nil)
         }
         
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { [self] (action, view, completion) in
@@ -272,7 +307,7 @@ class MyPasswordsPageTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func unwindToItemList(sender: UIStoryboardSegue) {
+    @IBAction func unwindToPasswordList(sender: UIStoryboardSegue) {
     
         if let sourceViewController = sender.source as? PasswordDetailsViewController,
            let newPassword = sourceViewController.newPassword {
@@ -315,7 +350,8 @@ class MyPasswordsPageTableViewController: UITableViewController {
                                         if let err = err {
                                             print("Error updating document: \(err)")
                                         } else {
-                                            print("Document successfully updated")
+//                                            print("Document successfully updated")
+                                            print("Password successfully changed!")
                                         }
                                     }
                                     
@@ -329,6 +365,7 @@ class MyPasswordsPageTableViewController: UITableViewController {
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             }
             else {
+                print("error unwinding")
             }
                 
     }
@@ -381,5 +418,29 @@ class MyPasswordsPageTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // Search bar configuration
+    
+    // whenever text inside search bar changes, run this function
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredData = []
+        
+        
+        if searchText == ""
+        {
+            filteredData = loadedStoredAccounts
+        }
+        else{
+        for account in loadedStoredAccounts {
+            
+            if account.applicationName.lowercased().contains(searchText.lowercased()) {
+                filteredData.append(account)
+            }
+            }
+        }
+        self.tableView.reloadData()
+    }
 
 }

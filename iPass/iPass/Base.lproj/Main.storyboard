@@ -346,7 +346,7 @@
             </objects>
             <point key="canvasLocation" x="-4839.130434782609" y="339.50892857142856"/>
         </scene>
-        <!--All Passwords-->
+        <!--Passwords-->
         <scene sceneID="EWL-0o-Q0Y">
             <objects>
                 <tableViewController id="LDm-Ao-MG0" customClass="MyPasswordsPageTableViewController" customModule="iPass" customModuleProvider="target" sceneMemberID="viewController">
@@ -411,7 +411,10 @@
                             <outlet property="delegate" destination="LDm-Ao-MG0" id="QTG-Sn-X3i"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="All Passwords" image="lock.shield" catalog="system" id="qU0-sW-Vrb"/>
+                    <tabBarItem key="tabBarItem" title="Passwords" image="lock.shield" catalog="system" id="qU0-sW-Vrb"/>
+                    <connections>
+                        <outlet property="searchBar" destination="ZcC-xC-sHv" id="GTq-cw-aI5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aez-fH-X2D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -480,7 +483,7 @@
                     <navigationItem key="navigationItem" id="2I2-XZ-Yg5">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="heF-Mh-lJh">
                             <connections>
-                                <segue destination="ovZ-BW-7E4" kind="unwind" unwindAction="unwindToItemListWithSender:" id="Wy3-1z-GEA"/>
+                                <segue destination="ovZ-BW-7E4" kind="unwind" unwindAction="unwindToPasswordListWithSender:" id="uGI-sN-Tb5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -489,7 +492,7 @@
                         <outlet property="email" destination="Q3x-yX-XWL" id="f3w-1s-zdF"/>
                         <outlet property="iconImage" destination="Hbv-d9-z2X" id="o57-Wq-x0f"/>
                         <outlet property="passwordTextfield" destination="Ifz-aQ-4RF" id="eve-d0-tcz"/>
-                        <outlet property="saveButton" destination="heF-Mh-lJh" id="YMY-uM-4t2"/>
+                        <outlet property="saveButton" destination="heF-Mh-lJh" id="B7d-d2-htV"/>
                         <outlet property="website" destination="gb1-9k-jBX" id="iw3-8V-xUn"/>
                     </connections>
                 </viewController>
@@ -1091,6 +1094,8 @@
         <!--Favorite Password Details View Controller-->
         <scene sceneID="FJg-pr-ORD">
             <objects>
+                <exit id="hxA-NY-AxB" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXn-wo-uzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="bQY-OH-lWc" userLabel="Favorite Password Details View Controller" customClass="FavoritePasswordDetailsViewController" customModule="iPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="udt-8k-diC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1151,7 +1156,7 @@
                     <navigationItem key="navigationItem" id="omi-n1-D5y">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="R5k-Ua-XNs">
                             <connections>
-                                <segue destination="hxA-NY-AxB" kind="unwind" unwindAction="unwindToItemListWithSender:" id="s8o-lH-lOT"/>
+                                <segue destination="hxA-NY-AxB" kind="unwind" unwindAction="unwindToItemListWithSender:" id="Qlo-kB-emv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1160,12 +1165,10 @@
                         <outlet property="email" destination="VEc-vq-H2d" id="bWG-83-poa"/>
                         <outlet property="iconImage" destination="7gY-Az-VyG" id="bOK-Ld-qAL"/>
                         <outlet property="passwordTextfield" destination="Vym-qF-FaM" id="TYH-fm-FDJ"/>
-                        <outlet property="saveButton" destination="R5k-Ua-XNs" id="1r5-nF-nAh"/>
+                        <outlet property="saveButtonn" destination="R5k-Ua-XNs" id="Mkt-5c-Qqp"/>
                         <outlet property="website" destination="sou-Q2-EyU" id="MBB-PI-Foy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KXn-wo-uzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="hxA-NY-AxB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2101" y="1035"/>
         </scene>
