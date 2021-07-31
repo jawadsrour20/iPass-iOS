@@ -28,6 +28,8 @@
 		473673E126AE4A7F0074709E /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473673E026AE4A7F0074709E /* RootTabBarController.swift */; };
 		47BED4A926B3401D0082E7F1 /* PasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */; };
 		47BED4AB26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BED4AA26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift */; };
+		47BED4AF26B589420082E7F1 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BED4AE26B589420082E7F1 /* ChangePasswordViewController.swift */; };
+		47BED4B126B591550082E7F1 /* ShowToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BED4B026B591550082E7F1 /* ShowToastExtension.swift */; };
 		EC68B951B8C9FDC09CB177E0 /* Pods_iPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F09EB06B5F645BCFF73E1B /* Pods_iPass.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		473673E026AE4A7F0074709E /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewController.swift; sourceTree = "<group>"; };
 		47BED4AA26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePasswordDetailsViewController.swift; sourceTree = "<group>"; };
+		47BED4AE26B589420082E7F1 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		47BED4B026B591550082E7F1 /* ShowToastExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToastExtension.swift; sourceTree = "<group>"; };
 		830FAD8324290A265894C469 /* Pods-iPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPass.release.xcconfig"; path = "Target Support Files/Pods-iPass/Pods-iPass.release.xcconfig"; sourceTree = "<group>"; };
 		99F09EB06B5F645BCFF73E1B /* Pods_iPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E39FD12A664B1A85977D7CF /* Pods-iPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPass.debug.xcconfig"; path = "Target Support Files/Pods-iPass/Pods-iPass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				473673E026AE4A7F0074709E /* RootTabBarController.swift */,
 				47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */,
 				47BED4AA26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift */,
+				47BED4AE26B589420082E7F1 /* ChangePasswordViewController.swift */,
+				47BED4B026B591550082E7F1 /* ShowToastExtension.swift */,
 			);
 			path = iPass;
 			sourceTree = "<group>";
@@ -251,9 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BED4B126B591550082E7F1 /* ShowToastExtension.swift in Sources */,
 				184A3DF226A77E9200ED2FE8 /* AddNewPasswordViewController.swift in Sources */,
 				473673E126AE4A7F0074709E /* RootTabBarController.swift in Sources */,
 				183B3DB626A6DA81007D8A31 /* CreateAccountViewController.swift in Sources */,
+				47BED4AF26B589420082E7F1 /* ChangePasswordViewController.swift in Sources */,
 				183DB41926AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift in Sources */,
 				183B3DAF26A6BC50007D8A31 /* MyCustomButton.swift in Sources */,
 				47BED4AB26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift in Sources */,

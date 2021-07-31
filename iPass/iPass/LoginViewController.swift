@@ -10,6 +10,7 @@ import Firebase
 class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: MyCustomTextField!
     
+    @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var emailTextfield: MyCustomTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,5 +39,33 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func forgotPasswordPressed(_ sender: Any) {
+        
+        
+        if emailTextfield.text != ""
+        {
+        if let userEmail = emailTextfield.text{
+        Auth.auth().sendPasswordReset(withEmail: userEmail) { error in
+          
+            let alert = UIAlertController(title: "Check your email to reset your password.", message: "If the email you provided is correct, you will get instructions to reset your password.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
+            }
+        }
+    }
+    
+    else
+    {
+    
+      let alert = UIAlertController(title: "No Email provided.", message: "Provide an email to reset password", preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+      NSLog("The \"OK\" alert occured.")
+      }))
+      self.present(alert, animated: true, completion: nil)
+    }
+    }
 }
 
