@@ -10,6 +10,10 @@ import Firebase
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var email: UILabel!
+    
+    
+    @IBOutlet public weak var darkModeSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,6 +21,20 @@ class SettingsViewController: UIViewController {
         
         email.text = Auth.auth().currentUser?.email
         
+    }
+    
+    
+    @IBAction func onSwitchStatusChange(_ sender: Any) {
+        if darkModeSwitch.isOn {
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .dark
+            }
+        }
+        else{
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .light
+            }
+        }
     }
     
     

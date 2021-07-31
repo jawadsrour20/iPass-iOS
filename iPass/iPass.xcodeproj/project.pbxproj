@@ -24,6 +24,9 @@
 		183DB42226AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183DB42126AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift */; };
 		184A3DEB26A767E900ED2FE8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A3DEA26A767E900ED2FE8 /* SettingsViewController.swift */; };
 		184A3DF226A77E9200ED2FE8 /* AddNewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A3DF126A77E9200ED2FE8 /* AddNewPasswordViewController.swift */; };
+		187199FD26B6083F00A493C3 /* ContactUsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187199FC26B6083F00A493C3 /* ContactUsTableViewController.swift */; };
+		18719A0126B6086200A493C3 /* ContactUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18719A0026B6086200A493C3 /* ContactUsTableViewCell.swift */; };
+		18719A0826B60D8400A493C3 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18719A0726B60D8400A493C3 /* Contact.swift */; };
 		473673DF26AE313D0074709E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 473673DE26AE313D0074709E /* GoogleService-Info.plist */; };
 		473673E126AE4A7F0074709E /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473673E026AE4A7F0074709E /* RootTabBarController.swift */; };
 		47BED4A926B3401D0082E7F1 /* PasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */; };
@@ -53,6 +56,9 @@
 		183DB42126AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritePasswordsTableViewCell.swift; sourceTree = "<group>"; };
 		184A3DEA26A767E900ED2FE8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		184A3DF126A77E9200ED2FE8 /* AddNewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPasswordViewController.swift; sourceTree = "<group>"; };
+		187199FC26B6083F00A493C3 /* ContactUsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactUsTableViewController.swift; path = iPass/ContactUsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		18719A0026B6086200A493C3 /* ContactUsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactUsTableViewCell.swift; path = iPass/ContactUsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		18719A0726B60D8400A493C3 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = iPass/Contact.swift; sourceTree = SOURCE_ROOT; };
 		473673DE26AE313D0074709E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		473673E026AE4A7F0074709E /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		47BED4A826B3401D0082E7F1 /* PasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 		183D7E3F26A4DBBB00858D9B /* iPass */ = {
 			isa = PBXGroup;
 			children = (
+				187199FB26B6082000A493C3 /* contactus */,
 				183D7E4026A4DBBB00858D9B /* AppDelegate.swift */,
 				183D7E4226A4DBBB00858D9B /* SceneDelegate.swift */,
 				183D7E4426A4DBBB00858D9B /* LoginViewController.swift */,
@@ -132,6 +139,16 @@
 				47BED4B026B591550082E7F1 /* ShowToastExtension.swift */,
 			);
 			path = iPass;
+			sourceTree = "<group>";
+		};
+		187199FB26B6082000A493C3 /* contactus */ = {
+			isa = PBXGroup;
+			children = (
+				187199FC26B6083F00A493C3 /* ContactUsTableViewController.swift */,
+				18719A0026B6086200A493C3 /* ContactUsTableViewCell.swift */,
+				18719A0726B60D8400A493C3 /* Contact.swift */,
+			);
+			path = contactus;
 			sourceTree = "<group>";
 		};
 		3AEBE3CE0170CC6A9BECF906 /* Frameworks */ = {
@@ -263,12 +280,15 @@
 				183B3DB626A6DA81007D8A31 /* CreateAccountViewController.swift in Sources */,
 				47BED4AF26B589420082E7F1 /* ChangePasswordViewController.swift in Sources */,
 				183DB41926AA0A1D004AEDCF /* MyPasswordsTableViewCell.swift in Sources */,
+				18719A0826B60D8400A493C3 /* Contact.swift in Sources */,
 				183B3DAF26A6BC50007D8A31 /* MyCustomButton.swift in Sources */,
 				47BED4AB26B48A5D0082E7F1 /* FavoritePasswordDetailsViewController.swift in Sources */,
 				183DB41626A9FE5F004AEDCF /* MyPasswordsPageTableViewController.swift in Sources */,
 				47BED4A926B3401D0082E7F1 /* PasswordDetailsViewController.swift in Sources */,
+				18719A0126B6086200A493C3 /* ContactUsTableViewCell.swift in Sources */,
 				183D7E4526A4DBBB00858D9B /* LoginViewController.swift in Sources */,
 				183DB42226AA288C004AEDCF /* MyFavoritePasswordsTableViewCell.swift in Sources */,
+				187199FD26B6083F00A493C3 /* ContactUsTableViewController.swift in Sources */,
 				183DB41F26AA2651004AEDCF /* MyFavoritePasswordsTableViewController.swift in Sources */,
 				18394A2D26A742A300E85298 /* MyCustomTextField.swift in Sources */,
 				183D7E5626A4E28500858D9B /* MyCustomView.swift in Sources */,

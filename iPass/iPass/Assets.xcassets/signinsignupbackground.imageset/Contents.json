@@ -15,7 +15,7 @@
       "scale" : "1x"
     },
     {
-      "filename" : "lightlock.png",
+      "filename" : "LoginSignupLight.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -26,7 +26,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "darklock.png",
+      "filename" : "LoginSignupDark.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

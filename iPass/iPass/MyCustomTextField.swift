@@ -16,6 +16,18 @@ import UIKit
         // Drawing code
     }
     */
+    
+    required init?(coder: NSCoder) {
+        super.init(coder:coder)
+        setLeftPadding(10)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame:frame)
+        setLeftPadding(10)
+    }
+    
+    
     @IBInspectable var cornerRadius: CGFloat = 0 {
             didSet {
                 layer.cornerRadius = cornerRadius
@@ -34,6 +46,12 @@ import UIKit
         didSet{
             setLeftIcon(img: LeftIcon!)
         }
+    }
+    
+    func setLeftPadding(_ amount:CGFloat){
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+            self.leftView = paddingView
+            self.leftViewMode = .always
     }
     
     func setLeftIcon(img: UIImage) {

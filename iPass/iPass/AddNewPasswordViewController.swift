@@ -71,7 +71,13 @@ class AddNewPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func setDarkMode(){
+        overrideUserInterfaceStyle = .dark
+    }
     
+    func setLightMode(){
+        overrideUserInterfaceStyle = .light
+    }
 
     func loadIcons() {
  
@@ -164,7 +170,8 @@ class AddNewPasswordViewController: UIViewController {
             button.layer.borderColor = UIColor.blue.cgColor
         
         }
-
+    
+    
     @IBAction func saveAccount(_ sender: Any) {
         
         var chosenIcon: String = "Default"
