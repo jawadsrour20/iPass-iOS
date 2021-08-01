@@ -7,13 +7,16 @@
 
 import UIKit
 import Firebase
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextfield: MyCustomTextField!
     
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var emailTextfield: MyCustomTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextfield.delegate = self
+        passwordTextfield.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -67,5 +70,13 @@ class LoginViewController: UIViewController {
       self.present(alert, animated: true, completion: nil)
     }
     }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
 

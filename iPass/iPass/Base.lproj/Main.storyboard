@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWV-ZG-guc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWV-ZG-guc">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,7 +25,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyFavoriteReusableCell" rowHeight="107" id="QYg-Ph-D2d" customClass="MyFavoritePasswordsTableViewCell" customModule="iPass" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="107"/>
+                                <rect key="frame" x="0.0" y="68.333333969116211" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QYg-Ph-D2d" id="ThA-Mr-lIa">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
@@ -119,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock" translatesAutoresizingMaskIntoConstraints="NO" id="Chq-4Z-TbU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Chq-4Z-TbU">
                                 <rect key="frame" x="10" y="88" width="394" height="313.66666666666669"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U45-Xe-NOf" userLabel="BigSV" customClass="MyCustomView" customModule="iPass" customModuleProvider="target">
@@ -370,7 +370,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyReusableCell" rowHeight="107" id="AZG-es-2Db" customClass="MyPasswordsTableViewCell" customModule="iPass" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="107"/>
+                                <rect key="frame" x="0.0" y="68.333333969116211" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AZG-es-2Db" id="1vF-9o-UxN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
@@ -523,7 +523,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock" translatesAutoresizingMaskIntoConstraints="NO" id="NMN-Ff-2B2" userLabel="lock2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="NMN-Ff-2B2" userLabel="lock2">
                                 <rect key="frame" x="0.0" y="88" width="414" height="313.66666666666669"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IGx-rm-fme" userLabel="BigSV2" customClass="MyCustomView" customModule="iPass" customModuleProvider="target">
@@ -703,22 +703,22 @@
                                         <rect key="frame" x="41.333333333333343" y="183" width="331.33333333333326" height="493"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1Y-Bm-JEo">
-                                                <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="46"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="55"/>
                                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B3w-QP-Ocg">
-                                                <rect key="frame" x="0.0" y="64" width="331.33333333333331" height="45.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="73" width="331.33333333333331" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sme-3M-G1y">
-                                                        <rect key="frame" x="0.0" y="15.333333333333314" width="265" height="15"/>
+                                                        <rect key="frame" x="0.0" y="20" width="265" height="15"/>
                                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="lK7-UI-mQj">
-                                                        <rect key="frame" x="265" y="14.666666666666684" width="66.333333333333314" height="16.666666666666664"/>
+                                                        <rect key="frame" x="265" y="19.333333333333314" width="66.333333333333314" height="16.666666666666664"/>
                                                         <gestureRecognizers/>
                                                         <imageReference key="image" image="chevron.right" catalog="system" renderingMode="original"/>
                                                         <connections>
@@ -732,16 +732,16 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D1P-hn-GOI">
-                                                <rect key="frame" x="0.0" y="127.66666666666669" width="331.33333333333331" height="46"/>
+                                                <rect key="frame" x="0.0" y="146" width="331.33333333333331" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiV-IC-WiE">
-                                                        <rect key="frame" x="0.0" y="15.666666666666629" width="265" height="15"/>
+                                                        <rect key="frame" x="0.0" y="20" width="265" height="15"/>
                                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qgr-gf-H5J">
-                                                        <rect key="frame" x="265" y="7.6666666666666288" width="68.333333333333314" height="31"/>
+                                                        <rect key="frame" x="265" y="12" width="68.333333333333314" height="31"/>
                                                         <connections>
                                                             <action selector="lightOrDark:" destination="OVR-ke-9QS" eventType="valueChanged" id="mLN-Du-Dmj"/>
                                                             <action selector="onSwitchStatusChange:" destination="pYl-Y8-Boi" eventType="valueChanged" id="EO7-sv-vHj"/>
@@ -753,41 +753,23 @@
                                                     <constraint firstItem="Qgr-gf-H5J" firstAttribute="width" secondItem="D1P-hn-GOI" secondAttribute="width" multiplier="0.2" id="oJE-pg-SO4"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bOb-w0-N08">
-                                                <rect key="frame" x="0.0" y="191.66666666666669" width="331.33333333333331" height="46"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Touch ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9P-xG-2ef">
-                                                        <rect key="frame" x="0.0" y="15.333333333333314" width="265" height="15"/>
-                                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jRH-Jf-c5X">
-                                                        <rect key="frame" x="265" y="7.3333333333333144" width="68.333333333333314" height="31"/>
-                                                    </switch>
-                                                </subviews>
-                                                <color key="backgroundColor" name="boxesinsettingspage"/>
-                                                <constraints>
-                                                    <constraint firstItem="jRH-Jf-c5X" firstAttribute="width" secondItem="bOb-w0-N08" secondAttribute="width" multiplier="0.2" id="8p8-5g-EVC"/>
-                                                </constraints>
-                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLe-ZE-fyN">
-                                                <rect key="frame" x="0.0" y="255.6666666666666" width="331.33333333333331" height="45.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="219" width="331.33333333333331" height="55"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DDs-ep-4fm">
-                                                <rect key="frame" x="0.0" y="319.33333333333337" width="331.33333333333331" height="46"/>
+                                                <rect key="frame" x="0.0" y="292" width="331.33333333333331" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sry-Xy-7lT">
-                                                        <rect key="frame" x="0.0" y="15.333333333333258" width="265" height="15"/>
+                                                        <rect key="frame" x="0.0" y="20" width="265" height="15"/>
                                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Beg-Gx-TMB" userLabel="contactusimage">
-                                                        <rect key="frame" x="265" y="14.666666666666627" width="66.333333333333314" height="16.666666666666664"/>
+                                                        <rect key="frame" x="265" y="19.333333333333371" width="66.333333333333314" height="16.666666666666664"/>
                                                         <gestureRecognizers/>
                                                         <imageReference key="image" image="chevron.right" catalog="system" renderingMode="original"/>
                                                         <connections>
@@ -801,16 +783,16 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JqR-vi-qxm">
-                                                <rect key="frame" x="0.0" y="383.33333333333337" width="331.33333333333331" height="45.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="365" width="331.33333333333331" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnN-pE-kAc">
-                                                        <rect key="frame" x="0.0" y="15.333333333333258" width="265" height="15"/>
+                                                        <rect key="frame" x="0.0" y="20" width="265" height="15"/>
                                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="eyb-SH-dka" userLabel="aboutus">
-                                                        <rect key="frame" x="265" y="14.666666666666627" width="66.333333333333314" height="16.666666666666664"/>
+                                                        <rect key="frame" x="265" y="19.333333333333371" width="66.333333333333314" height="16.666666666666664"/>
                                                         <gestureRecognizers/>
                                                         <imageReference key="image" image="chevron.right" catalog="system" renderingMode="original"/>
                                                         <connections>
@@ -824,7 +806,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPx-aj-9Vz">
-                                                <rect key="frame" x="0.0" y="447" width="331.33333333333331" height="46"/>
+                                                <rect key="frame" x="0.0" y="438" width="331.33333333333331" height="55"/>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -1194,7 +1176,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonalContactCell" id="Tyb-U0-nEw" customClass="ContactUsTableViewCell" customModule="iPass" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tyb-U0-nEw" id="0pU-l3-Otr">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -1495,7 +1477,7 @@
             <size key="intrinsicContentSize" width="99" height="41"/>
         </designable>
         <designable name="7Km-RA-5fS">
-            <size key="intrinsicContentSize" width="38" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="91O-cV-LsG">
             <size key="intrinsicContentSize" width="86" height="34"/>
@@ -1504,50 +1486,50 @@
             <size key="intrinsicContentSize" width="162" height="36"/>
         </designable>
         <designable name="E7f-pS-CJ3">
-            <size key="intrinsicContentSize" width="56" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="FBv-DN-E02">
-            <size key="intrinsicContentSize" width="14" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="Ifz-aQ-4RF">
-            <size key="intrinsicContentSize" width="84" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="Jiz-Cz-N2q">
-            <size key="intrinsicContentSize" width="77" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="Vym-qF-FaM">
-            <size key="intrinsicContentSize" width="84" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="aRZ-2u-R6p">
-            <size key="intrinsicContentSize" width="14" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="bl4-F5-mEB">
             <size key="intrinsicContentSize" width="76" height="34"/>
         </designable>
         <designable name="fv7-F4-yNn">
-            <size key="intrinsicContentSize" width="56" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="nHn-qo-abV">
-            <size key="intrinsicContentSize" width="14" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="v8y-0G-HHX">
-            <size key="intrinsicContentSize" width="14" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="zmT-qu-zLq">
             <size key="intrinsicContentSize" width="110" height="41"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="daY-ue-fnt"/>
+        <segue reference="HHy-m0-h2x"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Lock" width="151" height="165"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="fast" width="26" height="26"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="juste" width="28" height="25.5"/>
+        <image name="lock" width="151" height="165"/>
         <image name="lock" catalog="system" width="128" height="128"/>
         <image name="lock.shield" catalog="system" width="128" height="118"/>
         <image name="lockicon" width="27" height="26"/>
@@ -1558,13 +1540,13 @@
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="Signupbutton">
-            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="bigSVcolor">
             <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="boxesinsettingspage">
-            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonscolor">
             <color red="0.98000001907348633" green="0.50199997425079346" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -11,7 +11,7 @@ import Firebase
 
 
 
-class AddNewPasswordViewController: UIViewController {
+class AddNewPasswordViewController: UIViewController, UITextFieldDelegate {
 
     
     
@@ -38,7 +38,7 @@ class AddNewPasswordViewController: UIViewController {
     let EvernoteImg = UIImage(named:"Evernote")
     let FacebookImg = UIImage(named:"Facebook")
     let GithubImg = UIImage(named:"Github")
-    let GoogleImg = UIImage(named:"Google")
+    let BitbucketImg = UIImage(named:"Bitbucket")
     let InstagramImg = UIImage(named:"Instagram")
     let LinkedinImg = UIImage(named:"Linkedin")
     let MessengerImg = UIImage(named:"Messenger")
@@ -58,6 +58,11 @@ class AddNewPasswordViewController: UIViewController {
     let YahooImg = UIImage(named:"Yahoo")
     let YoutubeImg = UIImage(named:"Youtube")
     let ZoomImg = UIImage(named:"Zoom")
+    let CodepenImg = UIImage(named: "Codepen")
+    let MicrosoftImg = UIImage(named: "Microsoft")
+    let OfficeImg = UIImage(named: "Office")
+    let TwitchImg = UIImage(named: "Twitch")
+    
     
     @objc
     
@@ -65,7 +70,10 @@ class AddNewPasswordViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         
-        
+        websiteName.delegate = self
+        applicationName.delegate = self
+        userEmail.delegate = self
+        userPassword.delegate = self
         loadIcons()
       
         // Do any additional setup after loading the view.
@@ -82,7 +90,7 @@ class AddNewPasswordViewController: UIViewController {
     func loadIcons() {
  
         
-        for _ in 0...30{
+        for _ in 0...34{
             icons += [UIButton()]
         }
      
@@ -92,7 +100,7 @@ class AddNewPasswordViewController: UIViewController {
         icons[2].setBackgroundImage(AmazonImg, for: .normal)
         icons[3].setBackgroundImage(StackoverflowImg, for: .normal)
         icons[4].setBackgroundImage(GithubImg, for: .normal)
-        icons[5].setBackgroundImage(GoogleImg, for: .normal)
+        icons[5].setBackgroundImage(BitbucketImg, for: .normal)
         icons[6].setBackgroundImage(FacebookImg, for: .normal)
         icons[7].setBackgroundImage(InstagramImg, for: .normal)
         icons[8].setBackgroundImage(TwitterImg, for: .normal)
@@ -118,14 +126,18 @@ class AddNewPasswordViewController: UIViewController {
         icons[28].setBackgroundImage(DiscordImg, for: .normal)
         icons[29].setBackgroundImage(DribbleImg, for: .normal)
         icons[30].setBackgroundImage(DropboxImg, for: .normal)
+        icons[31].setBackgroundImage(CodepenImg, for: .normal)
+        icons[32].setBackgroundImage(MicrosoftImg, for: .normal)
+        icons[33].setBackgroundImage(OfficeImg, for: .normal)
+        icons[34].setBackgroundImage(TwitchImg, for: .normal)
         
-   
+        
         icons[0].titleLabel?.text = "Outlook"
         icons[1].titleLabel?.text = "Youtube"
         icons[2].titleLabel?.text = "Amazon"
         icons[3].titleLabel?.text = "Stackoverflow"
         icons[4].titleLabel?.text = "Github"
-        icons[5].titleLabel?.text = "Google"
+        icons[5].titleLabel?.text = "Bitbucket"
         icons[6].titleLabel?.text = "Facebook"
         icons[7].titleLabel?.text = "Instagram"
         icons[8].titleLabel?.text = "Twitter"
@@ -151,6 +163,10 @@ class AddNewPasswordViewController: UIViewController {
         icons[28].titleLabel?.text = "Discord"
         icons[29].titleLabel?.text = "Dribble"
         icons[30].titleLabel?.text = "Dropbox"
+        icons[31].titleLabel?.text = "Codepen"
+        icons[32].titleLabel?.text = "Microsoft"
+        icons[33].titleLabel?.text = "Office"
+        icons[34].titleLabel?.text = "Twitch"
         
         for icon in icons{
         icon.widthAnchor.constraint(equalToConstant: 60).isActive=true
@@ -231,4 +247,13 @@ class AddNewPasswordViewController: UIViewController {
         self.showToast(message: "Password Saved!", font: .systemFont(ofSize: 12.0))
     }
     }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
 }

@@ -11,7 +11,7 @@ import Firebase
 
 
 
-class ChangePasswordViewController: UIViewController {
+class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var oldPasswordTextfield: UITextField!
@@ -21,6 +21,9 @@ class ChangePasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        emailTextfield.delegate = self
+        oldPasswordTextfield.delegate = self
+        newPasswordTextfield.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -77,5 +80,13 @@ class ChangePasswordViewController: UIViewController {
         
     }
     }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
 
 }

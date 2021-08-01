@@ -8,13 +8,15 @@
 import UIKit
 import Firebase
 
-class CreateAccountViewController: UIViewController, UIAlertViewDelegate {
+class CreateAccountViewController: UIViewController, UIAlertViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var emailTextfield: MyCustomTextField!
     @IBOutlet weak var passwordTextfield: MyCustomTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        emailTextfield.delegate = self
+        passwordTextfield.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
@@ -50,5 +52,13 @@ class CreateAccountViewController: UIViewController, UIAlertViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
 
 }
